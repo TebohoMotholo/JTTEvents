@@ -155,38 +155,42 @@
   startTime.addEventListener('input', calculateCost);
   duration.addEventListener('input', calculateCost);
 
-  document.addEventListener('DOMContentLoaded', function () {
-    const calendarEl = document.getElementById('calendar');
+document.addEventListener('DOMContentLoaded', function () {
+  const calendarEl = document.getElementById('calendar');
 
-    const calendar = new FullCalendar.Calendar(calendarEl, {
-      initialView: 'dayGridMonth',
-      height: 550,
-      headerToolbar: {
-        left: 'prev,next today',
-        center: 'title',
-        right: 'dayGridMonth,timeGridWeek'
-      },
-      events: [
-        {
-          title: 'Youth Event – 4h',
-          start: '2025-09-14T18:00:00',
-          color: '#3b82f6'
-        },
-        {
-          title: 'Wedding – 6h',
-          start: '2025-09-20T14:00:00',
-          color: '#ec4899'
-        },
-        {
-          title: 'Funeral – 5h',
-          start: '2025-09-22T08:00:00',
-          color: '#10b981'
-        }
-      ]
-    });
-
-    calendar.render();
+  const calendar = new FullCalendar.Calendar(calendarEl, {
+    initialView: 'dayGridMonth',
+    height: 550,
+    headerToolbar: {
+      left: 'prev,next today',
+      center: 'title',
+      right: 'dayGridMonth,timeGridWeek'
+    },
+    events: []
   });
+
+  // Fetch CMS-generated data
+  fetch('data/bookings.json')
+    .then(response => response.json())
+    .then(data => {
+      const events = data.map(booking => {
+        const start = `${booking.date}T${booking.startTime}`;
+        const startHour = parseInt(booking.startTime.split(':')[0]);
+        const endHour = (startHour + booking.duration) % 24;
+        const end = `${booking.date}T${String(endHour).padStart(2, '0')}:${booking.startTime.split(':')[1]}`;
+
+        return {
+          title: `${booking.eventType === 'private' ? 'Private Hire' : 'Event'} – ${booking.duration}h`,
+          start: start,
+          end: end,
+          color: booking.eventType === 'private' ? '#ec4899' : '#3b82f6'
+        };
+      });
+
+      calendar.addEventSource(events);
+      calendar.render();
+    });
+});
 </script>
 
 
