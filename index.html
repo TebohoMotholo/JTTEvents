@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JTT Events - Events & Pro Sound</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Alpine.js CDN -->
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <!-- Tailwind Custom Config (Optional: Add glow effect) -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          boxShadow: {
+            glow: '0 0 20px rgba(59,130,246,0.6)',
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Header -->
+  <header class="bg-blue-600 text-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-xl font-bold tracking-wide">JTT Events</h1>
+      <nav class="space-x-4">
+        <a href="index.html" class="hover:underline">Home</a>
+        <a href="gallery.html" class="hover:underline">Gallery</a>
+        <a href="services.html" class="hover:underline">Services</a>
+        <a href="contact.html" class="hover:underline">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative bg-[url('images/hero-bg.jpg')] bg-cover bg-center h-[100vh] flex items-center justify-center text-center px-4">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="relative z-10 text-white animate-fade-in">
+      <h2 class="text-5xl font-extrabold mb-4 drop-shadow-lg">Make Every Event Unforgettable</h2>
+      <p class="text-2xl mb-6">Seasonal Youth & Kids Events + Pro Sound System Hire</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="services.html" class="bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-lg shadow-md transition">Explore Services</a>
+        <a href="sound-booking.html" class="bg-white text-blue-600 hover:bg-gray-100 py-3 px-8 rounded-lg shadow-md transition">Book Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Upcoming Events -->
+  <section id="events" class="py-16 bg-white px-4">
+    <h3 class="text-4xl font-bold text-center mb-12">Upcoming Events</h3>
+    <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      <!-- Event Card -->
+      <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg">
+        <img src="images/kids-event2.jpg" alt="Kids Spring Party" class="w-full h-64 object-cover">
+        <div class="p-6">
+          <h4 class="text-xl font-bold mb-2">Spring Kids Fun Day</h4>
+          <p class="text-gray-600 mb-4">Date: 21 September 2025 · Location: Mandela Park</p>
+          <p class="text-sm text-gray-700">Bring your kids for a day of games, snacks, music and laughter!</p>
+        </div>
+      </div>
+      <!-- Event Card -->
+      <div class="bg-gray-100 rounded-lg overflow-hidden shadow-lg">
+        <img src="images/youth-bash2.jpg" alt="Youth Bash" class="w-full h-64 object-cover">
+        <div class="p-6">
+          <h4 class="text-xl font-bold mb-2">Youth Bash – Summer Edition</h4>
+          <p class="text-gray-600 mb-4">Date: 15 December 2025 · Location: Civic Grounds</p>
+          <p class="text-sm text-gray-700">Live DJs, games, and performances — don't miss the biggest bash of the year!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bg-blue-600 text-white py-12 text-center px-4">
+    <h3 class="text-3xl md:text-4xl font-bold mb-4">Let’s Make Your Next Event Epic</h3>
+    <p class="mb-6 text-lg">Affordable rates, professional equipment, unforgettable experiences.</p>
+    <a href="#contact" class="bg-white text-blue-600 font-bold py-3 px-6 rounded-lg shadow hover:bg-gray-200 transition">Contact Us Now</a>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-gray-900 text-white py-8 text-center">
+    <p class="text-lg font-semibold mb-2">JTT Events</p>
+    <p class="mb-1"><a href="mailto:info@jttevents.co.za" class="hover:underline">info@jttevents.co.za</a></p>
+    <p class="mb-1"><a href="tel:+27764710323" class="hover:underline">076 471 0323</a></p>
+    <div class="mb-4 space-x-4">
+        <a href="index.html" class="hover:underline">Home</a>
+        <a href="gallery.html" class="hover:underline">Gallery</a>
+        <a href="#services" class="hover:underline">Services</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+      </div>
+    <p class="text-sm mt-4">&copy; 2025 JTT Events. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

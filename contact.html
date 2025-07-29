@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us – JTT Events</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Header -->
+  <header class="bg-blue-600 text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">JTT Events</h1>
+      <nav class="space-x-4">
+        <a href="index.html" class="hover:underline">Home</a>
+        <a href="services.html" class="hover:underline">Services</a>
+        <a href="gallery.html" class="hover:underline">Gallery</a>
+        <a href="contact.html" class="underline font-semibold">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-r from-blue-700 to-blue-500 text-white text-center py-20">
+    <h2 class="text-4xl font-bold mb-2">Get in Touch</h2>
+    <p class="text-lg">Have questions or want to book an event? We’re here for you.</p>
+  </section>
+
+  <!-- Contact Form and Info -->
+  <section class="py-20 px-4 max-w-6xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-12">
+      <!-- Form -->
+      <div>
+        <h3 class="text-2xl font-semibold mb-6">Send us a message</h3>
+        <form 
+          action="https://formspree.io/f/your-form-id" 
+          method="POST" 
+          class="space-y-6 bg-gray-50 p-6 rounded-lg shadow"
+        >
+          <div>
+            <label for="name" class="block font-medium">Your Name</label>
+            <input type="text" name="name" id="name" required class="w-full border border-gray-300 p-3 rounded mt-1" />
+          </div>
+          <div>
+            <label for="email" class="block font-medium">Your Email</label>
+            <input type="email" name="email" id="email" required class="w-full border border-gray-300 p-3 rounded mt-1" />
+          </div>
+          <div>
+            <label for="message" class="block font-medium">Message</label>
+            <textarea name="message" id="message" rows="5" required class="w-full border border-gray-300 p-3 rounded mt-1"></textarea>
+          </div>
+          <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <h3 class="text-2xl font-semibold mb-6">Contact Details</h3>
+        <ul class="space-y-4 text-gray-700">
+          <li><strong>Phone:</strong> <a href="tel:+27764710323" class="text-blue-600 hover:underline">076 471 0323</a></li>
+          <li><strong>Email:</strong> <a href="mailto:info@jttevents.co.za" class="text-blue-600 hover:underline">info@jttevents.co.za</a></li>
+          <li><strong>Location:</strong> Mandela Park, Phuthaditjhaba, 9866</li>
+        </ul>
+
+        <div class="mt-8">
+          <a href="https://wa.me/27764710323" target="_blank" class="inline-block bg-green-500 text-white px-5 py-3 rounded hover:bg-green-600 transition">📱 Chat on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8 text-center">
+    <p class="text-lg font-semibold mb-2">JTT Events</p>
+    <div class="mb-4 space-x-4">
+      <a href="index.html" class="hover:underline">Home</a>
+      <a href="services.html" class="hover:underline">Services</a>
+      <a href="gallery.html" class="hover:underline">Gallery</a>
+      <a href="contact.html" class="hover:underline">Contact</a>
+    </div>
+    <p class="text-sm">&copy; 2025 JTT Events. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

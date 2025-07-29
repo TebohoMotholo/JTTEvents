@@ -1,0 +1,21 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "bookings"
+    label: "Bookings"
+    folder: "content/bookings"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Phone", name: "phone", widget: "string" }
+      - { label: "Event Type", name: "event_type", widget: "select", options: ["event", "private"] }
+      - { label: "Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm" }
+      - { label: "Duration (hrs)", name: "duration", widget: "number", min: 1, max: 24 }
+      - { label: "Total", name: "total", widget: "number" }
+      - { label: "Notes", name: "body", widget: "markdown" }
