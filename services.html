@@ -5,34 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Our Services – JTT Events</title>
 
-  <!-- Tailwind CSS -->
+  
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-white text-gray-800 font-sans">
 
-  <!-- Header -->
-  <header class="bg-blue-600 text-white shadow-md sticky top-0 z-50">
-    <div class="container mx-auto flex justify-between items-center p-4">
-      <h1 class="text-xl font-bold tracking-wide">JTT Events</h1>
-      <nav class="space-x-4">
-        <a href="index.html" class="hover:underline">Home</a>
-        <a href="gallery.html" class="hover:underline">Gallery</a>
-        <a href="services.html" class="hover:underline">Services</a>
-        <a href="contact.html" class="hover:underline">Contact</a>
-      </nav>
-    </div>
-  </header>
 
-  <!-- Page Banner -->
-  <section class="bg-gradient-to-r from-blue-700 to-blue-500 text-white text-center py-20">
+<header class="bg-slate-700 text-white shadow-md sticky top-0 z-50">
+  <div class="container mx-auto px-4 flex justify-between items-center py-4">
+    <a href="index.html" class="block max-w-5 md:max-w-5">
+      <img src="images/JTT-Logo.png" alt="JTT Events Logo" class="h-auto w-full object-contain" />
+    </a>
+
+    
+    <button id="menu-button" class="md:hidden focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+
+    
+    <nav id="nav-menu" class="hidden md:flex space-y-2 md:space-y-0 md:space-x-4 flex-col md:flex-row absolute md:static top-full left-0 w-full md:w-auto bg-slate-700 md:bg-transparent text-center md:text-left p-4 md:p-0 z-40">
+      <a href="index.html" class="block py-2 md:py-0 hover:underline">Home</a>
+      <a href="gallery.html" class="block py-2 md:py-0 hover:underline">Gallery</a>
+      <a href="services.html" class="block py-2 md:py-0 hover:underline">Services</a>
+      <a href="contact.html" class="block py-2 md:py-0 hover:underline">Contact</a>
+    </nav>
+  </div>
+</header>
+
+  
+  <section class="bg-gradient-to-r from-blue-950 to-blue-500 text-white text-center py-20">
     <h2 class="text-4xl font-bold mb-2">Our Services</h2>
     <p class="text-lg">We offer unforgettable experiences for kids, youth, and event equipment hire</p>
   </section>
 
-  <!-- Services Section -->
+  
   <section class="py-24 px-4">
     <div class="max-w-6xl mx-auto">
-      <!-- Kids Events -->
+      
       <div class="flex flex-col md:flex-row items-center mb-20 gap-8">
         <div class="md:w-1/2">
           <img src="images/kids-events.jpg" alt="Kids Events" class="rounded-lg shadow-md w-full h-auto object-cover" />
@@ -42,11 +55,11 @@
           <p class="text-gray-600 mb-4">
             From themed birthday parties to fun-filled school holiday programs, we create joyful experiences for children with jumping castles, candy tables, and creative entertainment.
           </p>
-          <a href="index.html#contact" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-md shadow hover:bg-blue-700 transition">Book Kids Event</a>
+          <a href="gallery.html" class="inline-block bg-blue-900 text-white px-6 py-2 rounded-md shadow hover:bg-blue-700 transition">View Gallery</a>
         </div>
       </div>
 
-      <!-- Youth Events -->
+      
       <div class="flex flex-col md:flex-row-reverse items-center mb-20 gap-8">
         <div class="md:w-1/2">
           <img src="images/youth-events.jpg" alt="Youth Events" class="rounded-lg shadow-md w-full h-auto object-cover" />
@@ -56,39 +69,49 @@
           <p class="text-gray-600 mb-4">
             We host vibey street bashes, youth revival nights, and school gigs that bring the energy. Sound, lighting, music, and crowd engagement are all included!
           </p>
-          <a href="index.html#contact" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-md shadow hover:bg-blue-700 transition">Book Youth Event</a>
+          <a href="gallery.html" class="inline-block bg-blue-900 text-white px-6 py-2 rounded-md shadow hover:bg-blue-700 transition">View Gallery</a>
         </div>
       </div>
 
-      <!-- Equipment Hire -->
+      
       <div class="flex flex-col md:flex-row items-center gap-8">
         <div class="md:w-1/2">
           <img src="images/equipment-hire.jpg" alt="Equipment Hire" class="rounded-lg shadow-md w-full h-auto object-cover" />
         </div>
         <div class="md:w-1/2">
-          <h3 class="text-3xl font-semibold text-blue-700 mb-4">🔊 Equipment Hire</h3>
+          <h3 class="text-3xl font-semibold text-blue-700 mb-4">🔊 Sound Hire</h3>
           <p class="text-gray-600 mb-4">
             Need sound for your event? Rent our powerful PA system, wireless mics, mixers, lighting, and more. We deliver, set up, and provide tech support throughout.
           </p>
-          <a href="sound-booking.html" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-md shadow hover:bg-blue-700 transition">Hire Equipment</a>
+          <a href="sound-booking.html" class="inline-block bg-blue-900 text-white px-6 py-2 rounded-md shadow hover:bg-blue-700 transition">Book Sound System</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  
   <footer id="contact" class="bg-gray-900 text-white py-8 text-center">
     <p class="text-lg font-semibold mb-2">JTT Events</p>
-    <p class="mb-1"><a href="mailto:info@jttevents.co.za" class="hover:underline">info@jttevents.co.za</a></p>
-    <p class="mb-1"><a href="tel:+27764710323" class="hover:underline">076 471 0323</a></p>
+    <p class="mb-1"><a href="mailto:info@jttevents.co.za" class="hover:underline">jtt.eventsgroup@gmail.com</a></p>
+    <p class="mb-1"><a href="tel:+27764710323" class="hover:underline">076 471 0323/061 470 7696</a></p>
     <div class="mb-4 space-x-4">
         <a href="index.html" class="hover:underline">Home</a>
         <a href="gallery.html" class="hover:underline">Gallery</a>
         <a href="#services" class="hover:underline">Services</a>
         <a href="#contact" class="hover:underline">Contact</a>
       </div>
-    <p class="text-sm mt-4">&copy; 2025 JTT Events. All rights reserved.</p>
+    <p class="text-sm">&copy; <span id="year"></span> JTT Events. All rights reserved.</p>
   </footer>
+
+  <script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+    const menuButton = document.getElementById("menu-button");
+  const navMenu = document.getElementById("nav-menu");
+
+  menuButton.addEventListener("click", () => {
+    navMenu.classList.toggle("hidden");
+  });
+  </script>
 
 </body>
 </html>
